@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 1
+   
+   PHCT Typographic Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: ph_styles.css
+   4. Randall has several web fonts that he wants used for the titles of the plays produced by the company. Add the following web fonts to the style sheet, using @font-face rules before the comment section:
+a. The Champagne font using the cac_champagne.woff and cac_champagne.ttf files
+b. The Grunge font using the 1942.woff and 1942.ttf files
+c. The Dobkin font using the DobkinPlain.woff and DobkinPlain.ttf files
+5. Go to the Structural Styles section, creating a style rule that sets the background color of the
+html element to the value hsl(91, 8%, 56%).
+6. Add a style rule for the body element to set the background color to the value hsl(58, 31%, 84%)
+and the font of the body text to the font stack: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif.
+7. Create a style rule for the header element that sets the background color to black.
+8. Create a style rule for every paragraph that sets the margin space to 0 pixels and the padding
+space to 5 pixels on top and 25 pixels on the right, bottom, and left.
+9. For paragraphs that are direct children of the body element, create a style rule that sets the font size to 1.1em and horizontally centers the paragraph text.
+9. For paragraphs that are direct children of the body element, create a style rule that sets the font size to 1.1em and horizontally centers the paragraph text.
+10. Create a style rule for the address element that sets the font style to normal with a font size of 0.9em, horizontally centered on the page. Set the top and bottom padding to 10 pixels.
+11. Next, you’ll format the appearance of navigation lists on the page. Go to the Navigation Styles sectionandcreateastyleruleforthenav aselectorthatdisplaysthehypertextlinksusing
+the font stack ‘Trebuchet MS’, Helvetica, sans-serif, and sets the top and bottom padding to 10 pixels.
+12. For every unvisited and previously visited hypertext link within a nav element, set the text color to white, remove underlining from the link text, and set the background color to the semi-transparent value hsla(0, 0%, 42%, 0.4).
+13. For every active or hovered link in a nav element, set the text color to the semi-transparent value hsla(0, 0%, 100%, 0.7) and set the background color to the semi-transparent value hsl(0, 0%, 42%, 0.7).
+14. Go to the Section Styles section of the style sheet. In this section, you’ll define the appearance of the four playbills. You’ll start with the h1 headings from the sections. 
+Create a style rule for the section.playbill h1 selector that sets the font size to 3em and the font weight to normal. Set the margin space around the h1 headings to 0 pixels.
+ Set the padding space to 20 pixels on top, 0 pixels on the right, 10 pixels on the bottom, and 20 pixels on the left.
+15. Each playbill section is identified by a different ID value ranging from play1 to play4. Create style rules that set a different background color for each playbill using the following background colors:
+ID: play1 set to hsl(240, 100%, 88%) ID: play2 set to hsl(25, 88%, 73%) ID: play3 set to hsl(0, 100%, 75%) ID: play4 set to hsl(296, 86%, 86%)
+16. Each playbill section heading will also have a different font. For the h1 headings within the four different playbills, create style rules to apply the following font stacks:
+ID: play1 set to Champagne, cursive
+ID: play2 set to Grunge, ‘Times New Roman’, Times, serif ID: play3 set to Impact, Charcoal, sans-serif
+ID: play4 set to Dobkin, cursive
+Copyright 2018 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. WCN 02-200-203
+        
+B_C8934_tut02_ptg01_hr_83-168.indd 162 7/8/15 1:00 PM
+    
+ 17. Randall has put the author and the director of each play within a definition list. Format these definition lists now by going to the Definition List Styles section and creating a style rule for the dt element that sets the font size to 1.3em, the font weight to bold, and the font color to the semi-transparent value hsla(0, 0%, 0%, 0.4).
+18. Create a style rule for every dd element to set the font size to 1.3em, the left margin space to 0 pixels, and the bottom margin space to 10 pixels.
+19. Save your changes to the file and then open the ph_plays.html file in your browser. Verify that the typography and colors used in the document match those shown in Figure 2-54. Also, verify that, when you hover the mouse pointer over an item in the navigation lists for the entire page and for each play, the background color of the link becomes more opaque.
+
+*/
+
+@font-face {
+   font-family: Champange;
+   src: url(cac_champagne.ttf) format('truetype'),
+   url(cac_champange.woff) format('woff');
+}
+
+@font-face {
+   font-family: Grunge;
+   src: url(1942.woff) format('wofl'),
+   url(1942.ttf) format('truetype');
+}
+
+@font-face {
+   font-family: Dobkin;
+   src: url(DobkinPlain.ttf) format('truetype'),
+   url(DobkinPlain.woff) format('wofl');
+}
+
+/* Structural Styles */
+html {
+   background-color: hsl(91, 8%, 56%);
+   
+}
+body {
+   background-color: hsl(58, 31%, 84%);
+   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif ;
+}
+
+header {
+   background-color: black;
+}
+
+p {
+margin: 0px;
+padding: 5px 25px 25px 25px;
+}
+body > p{
+   font-size: 1.1rem;
+   text-align: center;
+}
+
+address {
+   font-style: normal;
+   font-size: .9em;
+   text-align: center;
+   padding: 10px 0px;
+}
+
+/* Navigation Styles */
+nav a {
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   padding: 10px 0px;
+  }
+  
+  nav a:link, nav a:visited {
+     color: white;
+     text-decoration: none;
+     background-color: hsla(0, 0%, 42%, .4);
+  } 
+  
+  nav a:active, nav a:hover {
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: hsla(0, 0%, 42%, .7);
+  text-decoration: none;
+  }
+
+/* Section Styles */
+section.playbill h1 {
+   font-size: 3em;
+   font-weight: normal;
+   margin: 0px;
+   padding: 20px 0px 10px 20px;
+}
+
+#play1 {
+   background-color: hsl(240, 100%, 88%);
+   font-family: Champagne,cursive;
+}
+#play2 {
+   background-color: hsl(25, 88%, 73%);
+   font-family: Grunge, ‘Times New Roman’, Times, serif;
+
+}
+#play3 {
+   background-color: hsl(0, 100%, 75%);
+   font-family:  Impact, Charcoal, sans-serif;
+
+}
+#play4 {
+   background-color: hsl(296, 86%, 86%);
+   font-family: Dobkin, cursive;
+
+}
+
+
+/* Description List Styles */
+dt {
+   font-size: 1.3em;
+   font-weight: bold;
+   color: hsla(0, 0%, 0%, 0.4);
+}
+
+dd {
+   font-size: 1.3em;
+   margin-left: 0px;
+   margin-bottom: 10px;
+}
