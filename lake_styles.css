@@ -1,0 +1,109 @@
+﻿@charset "UTF-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: lake_styles.css
+
+*/
+
+@font-face{
+   font-family: Champangne;
+   src: url(cac_champange.ttf) format('truetype')
+   url(cac_champagne.woff) format('wofl');
+}
+
+
+@font-face{
+   font-family: DobkinPlain;
+   src: url(DobkinPlain.ttf) format('truetype')
+   url(DobkinPlain.woff) format('wofl');
+}
+
+html{
+   background-color: RGB(209, 205, 151);
+}
+
+body{
+   max-width: 1020px;
+   width: 100%;
+   background-color: RGB(252, 250, 242);
+   
+}
+header nav a {
+   text-decoration: none;
+   background-color: RGB(133, 95, 140);
+   color: #b590a8;
+   line-height: 50px;
+}
+
+
+section p {
+   font-family: DobkinPlain, cursive;
+   padding: 20px;
+}
+
+
+aside {
+   font-family: Champangne, cursive;
+}
+
+aside h1 {
+   text-align: center;
+}
+
+aside h2 {
+   font-size: 1.2em;
+}
+
+aside:first-of-type {
+   background-color: RGB(231, 170, 157);
+   line-height: 30px;
+}
+
+aside:last-of-type {
+   background-color: RGB(217, 191, 128);
+}
+aside:last-of-type p {
+   padding-left: 1.5em;
+}
+
+
+#rightcol {
+   background-color: RGB(219, 203, 227);
+   height: 100%;
+}
+
+#rightcol h2 {
+   color: RGB(68, 72, 85);
+   padding-left: 20px;
+}
+
+#rightcol ul {
+   list-style-type: none;
+
+}
+
+#rightcol a {
+   color: #ada0af;
+   text-decoration: none;
+}
+
+#rightcol blockquote::before {
+   content: open-quote;
+}
+
+#rightcol blockquote::after {
+   content: close-quote;
+}
+
+footer {
+   background-color: RGB(101, 98, 106);
+   color: white;
+   text-align: center;
+}
