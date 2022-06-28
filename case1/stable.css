@@ -1,0 +1,44 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 5
+   Case Problem 1
+
+   Sudoku Puzzle Table Style Sheet
+   Author: 
+   Date:   
+
+   Filename:         stable.css
+   Supporting Files: green.jpg, gold.jpg
+
+*/
+
+.spuzzle table {
+   border-collapse: collapse;
+   border: 5px outset gray;
+}
+
+.spuzzle table td {
+   font-size: 20px;
+   color: blue;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   border: 1px solid black;
+}
+
+.spuzzle th {
+   font-size: 8px;
+   color: gray;
+}
+
+tbody th {
+   height: 40px;
+}
+
+.goldBox td{
+   background: url(gold.jpg) no-repeat center;
+}
+
+.greenBox td {
+   background: url(green.jpg) no-repeat;
+}
