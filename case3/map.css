@@ -12,3 +12,144 @@
 
 */
 
+html{
+   padding: 0px;
+   margin: 0px;
+}
+
+body{
+   font-family: Verdana, Geneva, or sans-serif;
+}
+
+nav, section, figure, figcaption  {
+   display: block;
+}
+
+time {
+   display: inline;
+}
+
+
+#page {
+   background: url(bluebar.png) repeat-y left;
+   background-color: rgb(255, 255, 128);
+   border: 15px ridge rgb(70, 76, 222);
+   border-radius: 50px;
+   width: 900px;
+   height: 750px;
+   margin: 10px auto 200px auto;
+}
+
+.vertical{
+   float: left;
+   width: 230px;
+}
+
+.vertical li {
+   list-style-type: none;
+   margin: 25px 20px;
+}
+
+.vertical li a {
+   color: white;
+   text-decoration: none;
+}
+
+.vertical li a:hover {
+   color: yellow;
+}
+
+#summary {
+   float: left;
+   margin-left: 30px;
+   width: 600px;
+}
+
+
+#summary h1{
+   color: rgb(70, 76, 222);
+   font-size: 24px;
+   font-weight: normal;
+   font-kerning: 5px;
+   margin: 20px;
+}
+
+#summary p {
+   margin: 10px;
+}
+
+#map {
+   position: relative;
+   background: url(lpmap.jpg) no-repeat top left;
+   background-color: white;
+   border: 1px solid black;
+   float: left;
+   margin-left: 30px;
+   width: 600px;
+   height: 294px;
+}
+
+figure{
+   background-color: rgb(70, 76, 222);
+   color: white;
+   width: 150px;
+   border-radius: 15px;
+   position: absolute;
+   z-index: 1;
+   clip: rect(0,20px,20px,0);
+}
+
+figure:hover{
+   clip: auto;
+   z-index: 2;
+}
+
+figcaption {
+   font-size: 12px;
+   margin: 10px;
+}
+
+figcaption time{
+   color: yellow;
+}
+
+#point0{
+   left: 560px;
+   top: 60px;
+}
+#point1{
+   left: 277px;
+   top: 90px;
+}
+#point2{
+   left: 175px;
+   top: 0px;
+}
+#point3{
+   left: 110px;
+   top: 115px;
+}
+#point4{
+   left: 55px;
+   top: 165px;
+}
+#point5{
+   left: 5px;
+   top: 180px;
+}
+#point6{
+   left: 15px;
+   top: 222px;
+}
+#point7{
+   left: 50px;
+   top: 245px;
+}
+#point8{
+   left: 100px;
+   top: 245px;
+}
+#point9{
+   left: 90px;
+   top: 220px;
+}
