@@ -1,53 +1,43 @@
-/*
-   New Perspectives on HTML and CSS
-   Tutorial 4
-   Case Problem 2
+header, section, aside, footer, nav{
+   display: block;
+}
 
-   Pizza Style Sheet
-   Author: 
-   Date:   
-
-   Filename:         pizza.css
-   Supporting Files: 
-
-*/
-@charset"utf-8";
-
-
-html{
+*{
    padding: 0px;
    margin: 0px;
 }
 
-
-header, section, aside, footer, nav {
-   display: block;
-}
-
+/*Body style rules*/
 body{
    background-color: red;
    font-family: Verdana, Geneva, sans-serif;
 }
 
-#container {
+/*The div id'container' is the whole page*/
+#container{
    width: 1000px;
-   margin: 0px auto;
-   border-left: 1px solid black;
+   margin: 0px auto 0px auto;
    border-right: 1px solid black;
-   background: white url(redbar.png) repeat-y left top;
+   border-left: 1px solid black;
+   background-color: white;
+   background-image: url(redbar.png);
+   background-position: top left;
+   background-repeat: repeat-y;    /*repeating'tilling' an image vertically only*/
 }
 
-header {
+/*Header style rules*/
+header{
    background-color: white;
    height: 100px;
 }
-.horizontal{
-   width: 100%;
+
+/*Horizontal Menu List style rules*/
+.horizontal {
    height: 70px;
+   width: 100%;
    background-color: white;
 }
-
-.horizontal li{
+.horizontal ul li{  /*Horizontal Menu individual list item style rules*/
    background-color: white;
    font-size: 16px;
    height: 50px;
@@ -55,62 +45,53 @@ header {
    width: 180px;
    display: block;
    float: left;
-   margin: 0px 5px;
+   margin: 0 5px 0 5px;
    text-align: center;
 }
- .horizontal li::after{
-   clear: both;
-   content: "";
-   display: table; 
- }
-
-.horizontal li a {
+.horizontal ul li a{    /*Horizontal Menu Link  style rules*/
    display: block;
    background-color: red;
    color: white;
-   border-radius: 30px/25px;
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
    text-decoration: none;
 }
-
-.horizontal li a:hover {
-   background-color: rgb(255, 101, 101) ;
+.horizontal ul li a:hover{
+   background-color: rgb(255,101,101);
    color: black;
-} 
+}
 
-
- .vertical{
+/*Vertical Navigation List Style Rules*/
+.vertical {
+   clear: left;
    float: left;
    width: 200px;
 }
-.vertical::after{
-   clear: both;
-   content: "";
-   display: table;
-}
-
-.vertical li{
+.vertical ul li{    /*List Items within the vertical navigation menu*/
    list-style-type: none;
    text-indent: 20px;
-   margin: 20px 0px;
+   margin: 20px 0 20px 0;
+}
+.vertical ul li a{  /*Links within the vertical navigation menu*/
+   color: white;
+   text-decoration: none;
+}
+.vertical ul li a:hover{
+   color: black;
 }
 
-#main {
-   background-color: rgb(255, 211, 211);
+/*Section id#main Style Rules*/
+#main{
+   background-color: rgb(255,211,211);
    float: left;
    width: 600px;
-}
-
-#main::after{
-   clear: both;
-   content: "";
-   display: table;
-}
-
-#main> p {
+   }
+#main  p{
    font-size: 20px;
    margin: 15px;
 }
-
 #main img{
    float: right;
    margin: 15px;
@@ -118,86 +99,67 @@ header {
    border-bottom-left-radius: 350px;
 }
 
- #main img::after{
-   clear: both;
-   content: "";
-   display: table;
-} 
-
-
-div.coupon {
+/*Div 'coupon' element rules*/
+.coupon{
    border: 5px dashed black;
    float: left;
    width: 170px;
    height: 150px;
-   margin: 20px 10px;
+   margin: 20px 10px 20px 10px;
    background: url(slice.png) no-repeat center, url(notice.png) no-repeat bottom right;
+ 
    background-color: white;
-   
+  
 }
-
-.coupon::after {
-   clear: both;
-   content: "";
-   display: table;
-}
-
-.coupon h1 {
+.coupon h1{
    color: white;
-   background-color: rgb(192, 0, 0);
-   font-size: 16px;
-   font-kerning: 2px;
+   background-color: rgb(192,0,0);
+   font-size: 14px;
+   letter-spacing: 2px;
    text-align: center;
    height: 25px;
-   font-variant: small-caps;
+   text-transform: lowercase;
+   
+}
+#main .coupon p{
+   font-size: 16px;
+   text-align:center;
+   margin: 1px;
 }
 
-.coupon p {
-   font-size: 14px;
-   text-align: center;
-   margin: 5px;
-}
-
+/*Aside element style rules*/
 aside{
    float: left;
    width: 200px;
 }
-aside::after{
-   clear: both;
-   content: "";
-   display: table;
-}
-
-
-aside h1 {
-   color: rgb(192, 0, 0);
+aside h1{
+   color: rgb(192,0,0);
    font-size: 20px;
-   font-kerning: 2px;
+   letter-spacing: 2px;
    font-weight: normal;
    text-align: center;
 }
-
-
-aside li {
-   background-color: rgb(255, 135, 135);
+aside ul li{
+   background-color: rgb(255,135,135);
    border-radius: 5px;
    color: black;
-   list-style-type: none;
+   list-style-type: none;    
    margin: 10px;
    padding: 5px;
 }
 
+/*Footer style rules*/
 footer{
+   clear: left;
    margin-left: 200px;
 }
-
 footer address{
-  border-top: 1px solid red ;
-  color: red;
-  font-size: 10px;
-  font-style: normal;
-  text-align: center;
-  margin-top: 25px;
-  padding-bottom: 20px; 
-} 
-
+   border-top: 1px solid red;
+   color: red;
+   font-size: 10px;
+   font-style: normal;
+   text-align: center;
+   margin-top: 25px;
+   padding-bottom: 20px;
+   
+}
