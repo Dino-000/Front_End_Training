@@ -73,7 +73,7 @@
         method="post"
       >
         <fieldset id="billing">
-          <legend>Billing Information</legend>
+          <legend>Billing Information (required)</legend>
           <label for="fName"> First Name </label>
           <input type="text" id="fName" name="fName" required />
 
@@ -102,6 +102,7 @@
             <option value="ID">ID</option>
             <option value="IL">IL</option>
           </select>
+          <div class="clear"></div>
           <label for="zip"> ZIP/Postal Code </label>
           <input
             type="number"
@@ -128,7 +129,7 @@
         </fieldset>
 
         <fieldset id="creditcard">
-          <legend aria-required="true">Credit Card</legend>
+          <legend aria-required="true">Credit Card (required)</legend>
           <fieldset class="optionGroup">
             <label for="ccard">
               <img src="diners.png" alt="" />
@@ -151,8 +152,8 @@
           <input
             name="ccardnumber"
             id="ccardnumber"
-            type="number"
-            pattern="/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/gm"
+            type="text"
+            pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
             required
           />
           <label for="ccardmonth">Expiration Date </label>
@@ -180,17 +181,16 @@
             <option value="2017">2017</option>
             <option value="2018">2018</option>
           </select>
-          <label for="csc"
-            >CSC
-            <input
-              type="number"
-              name="csc"
-              id="csc"
-              pattern="^\d{3}$"
-              placeholder="nnn"
-              required
-            />
-          </label>
+          <div class="clear"></div>
+          <label for="csc" class="full-width"> CSC </label>
+          <input
+            type="text"
+            name="csc"
+            id="csc"
+            pattern="^\d{3}$"
+            placeholder="nnn"
+            required
+          />
         </fieldset>
 
         <fieldset id="info">

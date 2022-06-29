@@ -1,17 +1,7 @@
-/*
-   New Perspectives on HTML and CSS
-   Tutorial 6
-   Case Problem 2
 
-   The Spice Bowl Payment Form Style Sheet
-   Author: Rita Sato
-   Date:   3/1/2014
-
-   Filename:         payment.css
-   Supporting Files: go.png, stop.png
-
-*/
-
+fieldset{
+   border: 0 none;
+}
 
 label {
    display: block;
@@ -19,6 +9,7 @@ label {
    margin-left: 0px;
    margin: 2px 5px;
    width: 25%;
+   text-align: right;
 }
 
 input {
@@ -43,17 +34,21 @@ textarea{
    width: 60%;
 }
 
-.optionGroup fieldset {
+.optionGroup  {
    margin-left: 25%;
 }
 .optionGroup label {
    display: inline;
-   width: 100px;
+   width: 70px;
+   margin: 0px;
 }
-.optionGroup button {
+.optionGroup input {
+   display: inline;
    margin: 0px;
    width: 20px;
 }
+
+
 
 #csc {
    width: 50px;
@@ -78,4 +73,11 @@ input:focus:invalid {
 input:focus:valid {
    background: url(go.png) no-repeat bottom right;
    background-color: rgb(215, 255, 215);
+} 
+
+.clear {
+   clear: both;
 }
+
+.optionGroup{}
+
