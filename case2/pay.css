@@ -1,0 +1,81 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 6
+   Case Problem 2
+
+   The Spice Bowl Payment Form Style Sheet
+   Author: Rita Sato
+   Date:   3/1/2014
+
+   Filename:         payment.css
+   Supporting Files: go.png, stop.png
+
+*/
+
+
+label {
+   display: block;
+   float: left;
+   margin-left: 0px;
+   margin: 2px 5px;
+   width: 25%;
+}
+
+input {
+   display: block;
+   float: left;
+   width: 60%;
+   font-size: .9em;
+   margin: 2px 0px;
+}
+
+select{
+   display: block;
+   float: left;
+   font-size: .9em;
+   margin: 2px;
+}
+textarea{
+   display: block;
+   float: left;
+   font-size: .9em;
+   height: 75px;
+   width: 60%;
+}
+
+.optionGroup fieldset {
+   margin-left: 25%;
+}
+.optionGroup label {
+   display: inline;
+   width: 100px;
+}
+.optionGroup button {
+   margin: 0px;
+   width: 20px;
+}
+
+#csc {
+   width: 50px;
+}
+
+#submit-btn {
+  background-color: rgb(239, 198, 145);
+  width: 150px;
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+   background-color: rgb(255, 218, 165);
+}
+input:focus:invalid {
+   background: url(stop.png) no-repeat bottom right;
+   background-color: rgb(255, 245, 215);
+}
+
+input:focus:valid {
+   background: url(go.png) no-repeat bottom right;
+   background-color: rgb(215, 255, 215);
+}
