@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="mill.css" />
+    <link rel="stylesheet" href="oform.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="mclogo.jpg" alt="" />
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <form  name="cOrder" action="http://www.mill_computers.com/orders/process.cgi" method="post">
+        <div class="form-group">
+          <fieldset>
+            <legend>Order Information (required)</legend>
+            <label for="fName"> First Name </label>
+            <input class="form-control" type="text" id="fName" name="fName" required />
+
+            <label for="lName"> Last Name </label>
+            <input class="form-control" type="text" id="lName" name="lName" required />
+
+            <label for="street"> Street Address </label>
+            <input class="form-control" type="text" id="street" name="street" required />
+            <label for="street2"> Street Address(2) </label>
+            <input  class="form-control" type="text" id="street2" name="street2" />
+            <label for="city"> City </label>
+            <input class="form-control" type="text" id="city" name="city" required />
+            <select class="form-control" name="state" id="state" required>
+            <label for="state"> State </label>
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+            </select>
+            <div class="clear"></div>
+            <label for="zip"> ZIP/Postal Code </label>
+            <input 
+              class="form-control"
+              type="text"
+              id="zip"
+              name="zip"
+              pattern="^\d{5}(\-\d{4})?$"
+              required
+            />
+            <label for="country"> Country </label>
+            <input 
+              class="form-control"
+              type="text"
+              name="country"
+              id="country"
+              value=" United States"
+              required
+              />          
+              <label for="phone"> Phone </label>
+            <input 
+              class="form-control"
+              type="text"
+              id="phone"
+              pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+              required
+            />          
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>PC Configuration</legend>
+            <label for="pSpeed">Processor Speed</label>
+            <select name="pSpeed" id="pSpeed" class=" form-control">
+              <option value="3.2">3.2 GHz</option>
+              <option value="4">4 GHz</option>
+              <option value="5.2">5.2 GHz</option>
+            </select>
+            <label for="mem">Memory</label>
+            <select name="mem" id="mem" class="form-control">
+              <option value="1">1 GB</option>
+              <option value="2">2 GB</option>
+              <option value="4">4 GB</option>
+              <option value="8">8 GB</option>
+            </select>
+            <label for="monitor">Monitor Size</label>
+            <select name="monitor" id="monitor" class="form-control">
+              <option value="15">15 "</option>
+              <option value="17">17 "</option>
+              <option value="19">19 "</option>
+              <option value="21">21 "</option>
+            </select>
+            <label for="hd">Hard Drive</label>
+            <select name="hd" id="hd" class="form-control">
+              <option value="240 GB">240 GB</option>
+              <option value="500 GB">500 GB</option>
+              <option value="700 GB">700 GB</option>
+              <option value="1 TB">1 TB</option>
+            </select>
+            <div class="form-check form-check-inline">
+              <h4>DVD Burner</h4>
+              <input class="form-check-input" type="radio" name="dvd" id="dvdY" value="Yes">
+              <label class="form-check-label" for="dvdY">Yes</label>
+              <input class="form-check-input" type="radio" name="dvd" id="dvdN" value="No">
+              <label class="form-check-label" for="dvdN">No</label>
+            </div>
+            <br>
+            <div class="form-check form-check-inline">
+              <h4>Tuner Card</h4>
+              <input class="form-check-input" type="radio" name="tuner" id="tunerY" value="Yes">
+              <label class="form-check-label" for="tunerY">Yes</label>
+              <input class="form-check-input" type="radio" name="tuner" id="tunerN" value="No">
+              <label class="form-check-label" for="tunerN">No</label>
+            </div>
+            <br>
+            <div class="form-check form-check-inline">
+              <h4>Media Card Reader</h4>
+              <input class="form-check-input" type="radio" name="mCard" id="mCardY" value="Yes">
+              <label class="form-check-label" for="mCardY">Yes</label>
+              <input class="form-check-input" type="radio" name="mCard" id="mCardN" value="No">
+              <label class="form-check-label" for="mCardN">No</label>
+            </div>
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="warranty" id="warranty" >
+              <label class="form-check-label" for="warranty">Warranty</label>
+             
+            </div>
+            <div class="form-group">
+              <label for="comment"><h4>Additional Information</h4></label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary" type="submit">Send Order</button>
+            <button type="button" class="btn btn-warning" value="submit">Cancel Order</button>
+            <button type="button" class="btn btn-info" value="submit">Contact Me</button>
+      </fieldset>     
+    </form>
+        
+    </main>
+  </body>
+</html>
