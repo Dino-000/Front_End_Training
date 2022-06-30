@@ -54,7 +54,11 @@
       <section>
 
          <figure>
-
+            <video height="260" width="320" poster="zoom.png" loop controls>
+               <source src="mandel.mp4" type="video/mp4">
+               <source src="mandel.webm" type="video/ogg">
+               Your browser does not support the video tag.
+            </video>
 
             <figcaption>Fly into the Mandelbrot Set</figcaption>
          </figure>
@@ -97,8 +101,15 @@
             </ul>
 
             <p>
-              
-              <br />      
+               <object type="application/x-java-applet"
+               width="280" height="240">
+                  <param name="code" value="Mandel.class" />
+                  Your browser does not support Java applets
+               </object>
+               <!-- <applet code="Mandel.class" >
+                  <b>Sorry, you need Java to play this game.</b>
+               </applet> -->
+               <br />      
               This applet is generously provided by 
                  <a href="http://daa.com.au/~james/fractals/">James Henstridge</a>.
            </p>
